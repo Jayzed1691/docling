@@ -102,6 +102,9 @@ rapidocr = [
 asr = [
     "openai-whisper>=20240930",
 ]
+ui = [
+    "streamlit>=1.28.0",
+]
 
 [dependency-groups]
 dev = [

@@ -116,6 +116,16 @@ QWEN25_VL_3B_MLX = InlineVlmOptions(
     temperature=0.0,
 )
 
+QWEN3_VL_8B_OLLAMA = ApiVlmOptions(
+    url=AnyUrl("http://localhost:11434/v1/chat/completions"),
+    params={"model": "qwen3-vl:8b"},
+    prompt="Convert this page to markdown. Do not miss any text and only output the bare markdown!",
+    scale=2.0,
+    timeout=120,
+    response_format=ResponseFormat.MARKDOWN,
+    temperature=0.0,
+)
+
 # Gemma-3
 GEMMA3_12B_MLX = InlineVlmOptions(
     repo_id="mlx-community/gemma-3-12b-it-bf16",
@@ -142,3 +152,4 @@ class VlmModelType(str, Enum):
     SMOLDOCLING = "smoldocling"
     GRANITE_VISION = "granite_vision"
     GRANITE_VISION_OLLAMA = "granite_vision_ollama"
+    QWEN3_VL_8B_OLLAMA = "qwen3_vl_8b_ollama"
