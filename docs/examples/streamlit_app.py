@@ -12,6 +12,8 @@ Features:
 - Document chunking for RAG applications
 """
 
+from __future__ import annotations
+
 import gc
 import json
 import logging
@@ -22,10 +24,14 @@ import zipfile
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple
 
 import pandas as pd
 import streamlit as st
+
+if TYPE_CHECKING:
+    from docling.datamodel.base_models import InputFormat
+    from docling.document_converter import DocumentConverter, PdfFormatOption
 
 # Optional torch import
 try:
