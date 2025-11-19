@@ -121,7 +121,7 @@ QWEN3_VL_8B_OLLAMA = ApiVlmOptions(
     params={"model": "qwen3-vl:8b"},
     prompt="Convert this page to markdown. Do not miss any text and only output the bare markdown!",
     scale=2.0,
-    timeout=120,
+    timeout=300,
     response_format=ResponseFormat.MARKDOWN,
     temperature=0.0,
 )

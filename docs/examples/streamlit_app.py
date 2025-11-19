@@ -515,7 +515,7 @@ def main():
                     )
                     config["ollama_model_name"] = ollama_model_name
 
-                vlm_timeout = st.slider("Timeout (seconds)", 30, 300, 120)
+                vlm_timeout = st.slider("Timeout (seconds)", 60, 600, 300)
                 config["vlm_timeout"] = vlm_timeout
 
                 config["enable_remote_services"] = True
